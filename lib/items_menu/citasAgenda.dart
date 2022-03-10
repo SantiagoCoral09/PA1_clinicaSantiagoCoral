@@ -1,24 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CitasAgenda extends StatelessWidget {
-  final cita1 = {
-    "Tratamiento: 1. Blanqueamiento Dental",
-    "Fecha y Hora de la cita: 21/06/2022  08:00 am",
-    "Doctor: Manuel Solarte"
-  };
-
-  final cita2 = {
-    "Tratamiento: 2. Extracción de muelas del juicio",
-    "Fecha y Hora de la cita: 2/05/2022  09:00 am",
-    "Doctora: Sandra Guevara"
-  };
-
-  final cita3 = {
-    "Tratamiento: 3. Ortodoncia brackets",
-    "Fecha y Hora de la cita: 12/09/2022  08:00 am",
-    "Doctor: Javier Pistala"
-  };
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,29 +11,45 @@ class CitasAgenda extends StatelessWidget {
         Divider(),
         Text('Citas a tener en cuenta', textAlign: TextAlign.center),
         Divider(),
-        ...cita1
-            .map(
-              (personal) => ListTile(
-                subtitle: Text(personal),
+        Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.sms),
+                title: Text("Tratamiento: 1. Blanqueamiento Dental"),
+                subtitle: Text(
+                    "Fecha y Hora de la cita: 12/09/2022 08:00 am \n Doctor: Javier Pistala"),
               ),
-            )
-            .toList(),
+            ],
+          ),
+        ),
         Divider(),
-        ...cita2
-            .map(
-              (personal) => ListTile(
-                subtitle: Text(personal),
+        Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.sms),
+                title: Text("Tratamiento: 2. Extracción de muelas del juicio"),
+                subtitle: Text(
+                    "Fecha y Hora de la cita: 2/05/2022  09:00 am\nDoctora: Sandra Guevara"),
               ),
-            )
-            .toList(),
+            ],
+          ),
+        ),
         Divider(),
-        ...cita3
-            .map(
-              (personal) => ListTile(
-                subtitle: Text(personal),
+        Card(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.sms),
+                title: Text("Tratamiento: 3. Ortodoncia brackets"),
+                subtitle: Text(
+                    "Fecha y Hora de la cita: 12/09/2022  08:00 am\nDoctor: Javier Pistala"),
               ),
-            )
-            .toList(),
+            ],
+          ),
+        ),
+        Divider(),
       ]),
     );
   }

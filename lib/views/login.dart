@@ -47,7 +47,7 @@ class _ListView1State extends State<Login> {
   Widget _crearInput2() {
     return TextField(
       controller: _pass, //capturar
-      textCapitalization: TextCapitalization.sentences,
+      obscureText: true,
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(15.0)),
         hintText: 'Agrega tu Password',

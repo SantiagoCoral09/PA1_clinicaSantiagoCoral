@@ -1,9 +1,6 @@
-import 'package:clinica/items_menu/citasAgenda.dart';
 import 'package:flutter/material.dart';
-import 'package:clinica/items_menu/datosPersonales.dart';
-import 'package:clinica/items_menu/tratamientos.dart';
-import 'package:clinica/items_menu/citas.dart';
-import 'package:clinica/items_menu/pagos.dart';
+
+import 'package:clinica/exports/viewsExport.dart';
 
 class MenuPrincipal extends StatelessWidget {
   @override
